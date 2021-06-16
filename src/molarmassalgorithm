@@ -1,0 +1,21 @@
+  // import { useRef } from "react";
+  // let capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  // let compoundString = useRef();
+
+  // const calculateMass = () => {
+  //     let string = compoundString.current.value.split('')
+  //     let elementArray = [];
+  //     for (let s = 0; s < string.length; s++) {
+  //         let curr = '';
+  //         if (capitalLetters.split('').includes(string[s])) {
+  //             curr += string[s]
+  //             if (!capitalLetters.split('').includes(string[s+1]) && string[s+1]) {
+  //                 curr += string[s+1]
+  //             }
+  //         }
+  //         if (curr) elementArray.push(curr)
+  //     }
+  //     console.log(elementArray)
+  // }
+// <input ref={compoundString} type="text" className= "input-box" />
+    // <button onClick = {calculateMass}>Find Molar Mass</button>
