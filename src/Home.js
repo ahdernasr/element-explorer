@@ -3,6 +3,7 @@ const Home = () => {
   return (
     <div className="home-div">
       <div className="periodic-table">
+        
         <div class="period">
           <div className="table-element period-label">
             <p>1</p>
@@ -89,7 +90,7 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="table-element filler"></div>
+              <div className="filler"></div>
               <div className="table-element alkaline">
                 <div>
                   <h3>4</h3>
@@ -108,15 +109,52 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div class="period-section-2 alkali">
-            <div class="preview"></div>
+          <div class="period-section-2">
+            <div class="preview">
+              {" "}
+              <div>
+                <h3>Atomic Number</h3>
+                <h1>Symbol</h1>
+                <h3>Element</h3>
+                <h3>Relative Atomic Mass</h3>
+              </div>
+            </div>
           </div>
-          <div class="period-section-3 alkali">
-            <div class="key"></div>
+          <div class="period-section-3">
+            <div class="key">
+              <table>
+                <tr>
+                  <th>Standard State</th>
+                  <td>Gas</td>
+                </tr>
+                <tr>
+                  <th>Atomic Radius</th>
+                  <td>37</td>
+                </tr>
+                <tr>
+                  <th>Ionisation Energy</th>
+                  <td>1312</td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <th>Electronegativity</th>
+                  <td>2.2</td>
+                </tr>
+                <tr>
+                  <th>Ionic Radius</th>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <th>Discovered</th>
+                  <td>1766</td>
+                </tr>
+              </table>
+            </div>
           </div>
-          <div class="period-section-4 alkali">
+          <div class="period-section-4">
             <div>
-              <div className="table-element filler"></div>
+              <div className="filler"></div>
               <div className="table-element metalloid">
                 {" "}
                 <div>
@@ -137,7 +175,7 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="table-element filler"></div>
+              <div className="filler"></div>
               <div className="table-element non-metal">
                 {" "}
                 <div>
@@ -158,7 +196,7 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="table-element filler"></div>
+              <div className="filler"></div>
               <div className="table-element non-metal">
                 {" "}
                 <div>
@@ -179,7 +217,7 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="table-element filler"></div>
+              <div className="filler"></div>
               <div className="table-element non-metal">
                 {" "}
                 <div>
@@ -200,7 +238,7 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="table-element filler"></div>
+              <div className="filler"></div>
               <div className="table-element halogen">
                 {" "}
                 <div>
@@ -582,76 +620,348 @@ const Home = () => {
         </div>
 
         <div class="period">
-          <div className="period6 table-element alkali"></div>
-          <div className="table-element alkaline"></div>
-          <div className="table-element lan-act">
-            <p>57-71</p>
+          <div className="period6 table-element alkali">
+            {" "}
+            <div>
+              <h3>55</h3>
+              <h1>Cs</h1>
+              <h3>Caesium</h3>
+              <h3>132.91</h3>
+            </div>
           </div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element basic"></div>
-          <div className="table-element basic"></div>
-          <div className="table-element basic"></div>
-          <div className="table-element metalloid"></div>
-          <div className="table-element halogen"></div>
-          <div className="table-element noble"></div>
-        </div>
-
-        <div class="period">
-          <div className="period7 table-element alkali"></div>
-          <div className="table-element alkaline"></div>
-          <div className="table-element lan-act">
-            <p>89-103</p>
+          <div className="table-element alkaline">
+            {" "}
+            <div>
+              <h3>56</h3>
+              <h1>Ba</h1>
+              <h3>Barium</h3>
+              <h3>137.33</h3>
+            </div>
           </div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element transition"></div>
-          <div className="table-element basic"></div>
-          <div className="table-element basic"></div>
-          <div className="table-element basic"></div>
-          <div className="table-element basic"></div>
-          <div className="table-element halogen"></div>
-          <div className="table-element noble"></div>
+          <div className="table-element lan-act">
+            <p>57 - 71</p>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>72</h3>
+              <h1>Hf</h1>
+              <h3>Hafnium</h3>
+              <h3>178.49</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>73</h3>
+              <h1>Ta</h1>
+              <h3>Tantalum</h3>
+              <h3>180.95</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>74</h3>
+              <h1>W</h1>
+              <h3>Tungsten</h3>
+              <h3>183.84</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>75</h3>
+              <h1>Re</h1>
+              <h3>Rhenium</h3>
+              <h3>186.21</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>76</h3>
+              <h1>Os</h1>
+              <h3>Osmium</h3>
+              <h3>190.23</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>77</h3>
+              <h1>Ir</h1>
+              <h3>Iridium</h3>
+              <h3>192.22</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>78</h3>
+              <h1>Pt</h1>
+              <h3>Platinum</h3>
+              <h3>195.08</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>79</h3>
+              <h1>Au</h1>
+              <h3>Gold</h3>
+              <h3>196.97</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>80</h3>
+              <h1>Hg</h1>
+              <h3>Mercury</h3>
+              <h3>200.59</h3>
+            </div>
+          </div>
+          <div className="table-element basic">
+            {" "}
+            <div>
+              <h3>81</h3>
+              <h1>Ti</h1>
+              <h3>Thallium</h3>
+              <h3>204.38</h3>
+            </div>
+          </div>
+          <div className="table-element basic">
+            {" "}
+            <div>
+              <h3>82</h3>
+              <h1>Pb</h1>
+              <h3>Lead</h3>
+              <h3>207.2</h3>
+            </div>
+          </div>
+          <div className="table-element basic">
+            {" "}
+            <div>
+              <h3>83</h3>
+              <h1>Bi</h1>
+              <h3>Bismuth</h3>
+              <h3>208.98</h3>
+            </div>
+          </div>
+          <div className="table-element metalloid">
+            {" "}
+            <div>
+              <h3>84</h3>
+              <h1>Po</h1>
+              <h3>Polonium</h3>
+              <h3>(209)</h3>
+            </div>
+          </div>
+          <div className="table-element halogen">
+            {" "}
+            <div>
+              <h3>85</h3>
+              <h1>At</h1>
+              <h3>Astatine</h3>
+              <h3>(210)</h3>
+            </div>
+          </div>
+          <div className="table-element noble">
+            {" "}
+            <div>
+              <h3>86</h3>
+              <h1>Rn</h1>
+              <h3>Radon</h3>
+              <h3>(222)</h3>
+            </div>
+          </div>
         </div>
 
         <div class="period">
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
+          <div className="period7 table-element alkali">
+            {" "}
+            <div>
+              <h3>87</h3>
+              <h1>Fr</h1>
+              <h3>Francium</h3>
+              <h3>(223)</h3>
+            </div>
+          </div>
+          <div className="table-element alkaline">
+            {" "}
+            <div>
+              <h3>88</h3>
+              <h1>Ra</h1>
+              <h3>Radium</h3>
+              <h3>(226)</h3>
+            </div>
+          </div>
+          <div className="table-element lan-act">
+            <p>89 - 103</p>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>104</h3>
+              <h1>Rf</h1>
+              <h3>Rutherfordium</h3>
+              <h3>(267)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>105</h3>
+              <h1>Db</h1>
+              <h3>Dubnium</h3>
+              <h3>(268)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>106</h3>
+              <h1>Sg</h1>
+              <h3>Seaborgium</h3>
+              <h3>(269)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>107</h3>
+              <h1>Bh</h1>
+              <h3>Bohrium</h3>
+              <h3>(270)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>108</h3>
+              <h1>Hs</h1>
+              <h3>Hassium</h3>
+              <h3>(277)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>109</h3>
+              <h1>Mt</h1>
+              <h3>Meitnerium</h3>
+              <h3>(278)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>110</h3>
+              <h1>Ds</h1>
+              <h3>Damstadtium</h3>
+              <h3>(281)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>111</h3>
+              <h1>Rg</h1>
+              <h3>Roentgenium</h3>
+              <h3>(282)</h3>
+            </div>
+          </div>
+          <div className="table-element transition">
+            {" "}
+            <div>
+              <h3>112</h3>
+              <h1>Cn</h1>
+              <h3>Copemicium</h3>
+              <h3>(285)</h3>
+            </div>
+          </div>
+          <div className="table-element basic">
+            {" "}
+            <div>
+              <h3>113</h3>
+              <h1>Nh</h1>
+              <h3>Nihonium</h3>
+              <h3>(286)</h3>
+            </div>
+          </div>
+          <div className="table-element basic">
+            {" "}
+            <div>
+              <h3>114</h3>
+              <h1>Fl</h1>
+              <h3>Flerovium</h3>
+              <h3>(289)</h3>
+            </div>
+          </div>
+          <div className="table-element basic">
+            {" "}
+            <div>
+              <h3>115</h3>
+              <h1>Mc</h1>
+              <h3>Moscovium</h3>
+              <h3>(290)</h3>
+            </div>
+          </div>
+          <div className="table-element basic">
+            {" "}
+            <div>
+              <h3>116</h3>
+              <h1>Lv</h1>
+              <h3>Livermorium</h3>
+              <h3>(293)</h3>
+            </div>
+          </div>
+          <div className="table-element halogen">
+            {" "}
+            <div>
+              <h3>117</h3>
+              <h1>Ts</h1>
+              <h3>Tennessine</h3>
+              <h3>(294)</h3>
+            </div>
+          </div>
+          <div className="table-element noble">
+            {" "}
+            <div>
+              <h3>118</h3>
+              <h1>Og</h1>
+              <h3>Oganesson</h3>
+              <h3>(294)</h3>
+            </div>
+          </div>
         </div>
 
         <div class="period">
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+        </div>
+
+        <div class="period">
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
           <div className="table-element lanthanides">
             {" "}
             <div>
@@ -790,9 +1100,9 @@ const Home = () => {
         </div>
 
         <div class="period">
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
-          <div className="table-element filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
+          <div className="filler"></div>
           <div className="table-element actinides">
             {" "}
             <div>
@@ -929,6 +1239,18 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="menu">
+        <div className="menu-content">
+          <div className="menu-select">Molar Mass</div>
+          <div className="menu-select">Periodic Trends</div>
+          <div className="menu-select">Scientists</div>
+          <div className="menu-select">Timeline</div>
+          <div className="menu-select">Report an error</div>
+        </div>
+        <i className="fab fa-github"></i>
+        <i className="fab fa-discord"></i>
       </div>
     </div>
   );
