@@ -1,7 +1,11 @@
-import Home from "./Home";
+import Menu from "./Menu";
+import Table from "./Table";
 function App() {
   return (
-    <Home />
+    <div className="home-div">
+      <Table />
+      <Menu />
+    </div>
   );
 }
 

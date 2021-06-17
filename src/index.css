@@ -1,3 +1,6 @@
+
+/***************************COMMON STYLING**************************/
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -12,6 +15,9 @@ body {
   height: 100vh;
 }
 
+/***************************PERIODIC TABLE STYLING**************************/
+
+/* Periodic table alignment style */
 .periodic-table {
   width: fit-content;
   height: fit-content;
@@ -19,16 +25,7 @@ body {
   flex-direction: column;
 }
 
-.table-element h1 {
-  margin: 0;
-  font-size: 19px;
-}
-
-.table-element h3 {
-  margin: 0;
-  font-size: 9.5px;
-}
-
+/* Styling for each square containing information (element squares) */
 .table-element {
   display: flex;
   flex-direction: column;
@@ -38,23 +35,42 @@ body {
   height: 65px;
 }
 
+.table-element h1 {
+  font-size: 19px;
+  margin: 0;
+}
+
+.table-element h3 {
+  font-size: 9.5px;
+  margin: 0;
+}
+
 .table-element:hover {
   opacity: 80%;
   cursor: pointer;
+  transition: .3s opacity;
 }
 
 .table-element div {
+  position: absolute;
   margin-left: 0.25rem;
 }
 
-.period {
+/* Filler elements (white blocks) */
+.filler {
+  background-color: white;
+  border: 1px solid white;
+  width: 65px;
+  height: 65px;
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.multi-period {
-  width: 100%;
+/* Period styling */
+.period, .multi-period {
   display: flex;
+  width: 100%;
 }
 
 .period-section-1 {
@@ -62,6 +78,19 @@ body {
   flex-direction: row;
 }
 
+.period-section-4 {
+  display: flex;
+  flex-direction: row;
+}
+
+.period-label {
+  background-color: white;
+  text-align: center;
+  height: 30px;
+  padding-bottom: 10px;
+}
+
+/* Styling for box that previews hovered on element */
 .preview {
   border: 2px solid white;
   background-color: pink;
@@ -74,7 +103,7 @@ body {
 
 .preview h1 {
   margin: 0;
-  font-size: 30px;
+  font-size: 40px;
   padding-bottom: 0.75rem;
 }
 
@@ -92,6 +121,7 @@ body {
   flex-direction: column;
 }
 
+/* Styling for key table that shows specifc data of element on an element's hover */
 .key {
   border: 2px solid white;
   background-color: mistyrose;
@@ -105,110 +135,104 @@ body {
 }
 
 .key td {
+  display: inline-block;
   color: midnightblue;
-  border: 1px solid black;
-  padding: 0.5rem 0.75rem;
-  font-size: 15px;
+  border: 1px solid rgb(134, 133, 133);
+  padding: 0.5rem 0.5rem;
+  font-size: 13px;
   text-align: center;
+  min-width: 3.75rem;
+  max-width: 3.75rem;
+  min-height: 1rem;
+  max-height: 1rem;
+  margin-left: 0.1rem
 }
 
 .key th {
+   display: inline-block;
   font-weight: 400;
   color: steelblue;
-  border: 1px solid black;
-  padding: 0.5rem 0.75rem;
-  font-size: 15px;
+  border: 1px solid rgb(134, 133, 133);
+  padding: 0.5rem 0.2rem;
+  font-size: 13px;
+  min-width: 8rem;
+  min-height: 1rem;
 }
 
+/* Flip from Key to Data button */
 
+.fa-exchange-alt {
+  font-size: 35px;
+  color: lightcoral;
+}
 
-/* .period1::before {
+.fa-exchange-alt:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+/* Period labels (left-hand side labels) */
+
+.period1::before {
   content: "1";
   border-color: black;
   position: relative;
-  top: 40%;
   margin-top: auto;
   margin-bottom: auto;
-  left: -20px;
+  left: -25px;
 }
 
 .period2::before {
   content: "2";
   border-color: black;
   position: relative;
-  top: 40%;
   margin-top: auto;
   margin-bottom: auto;
-  left: -20px;
+  left: -25px;
 }
 
 .period3::before {
   content: "3";
   border-color: black;
   position: relative;
-  top: 40%;
   margin-top: auto;
   margin-bottom: auto;
-  left: -20px;
+  left: -25px;
 }
 
 .period4::before {
   content: "4";
   border-color: black;
   position: relative;
-  top: 40%;
   margin-top: auto;
   margin-bottom: auto;
-  left: -20px;
+  left: -25px;
 }
 
 .period5::before {
   content: "5";
   border-color: black;
   position: relative;
-  top: 40%;
   margin-top: auto;
   margin-bottom: auto;
-  left: -20px;
+  left: -25px;
 }
 
 .period6::before {
   content: "6";
   border-color: black;
   position: relative;
-  top: 40%;
   margin-top: auto;
   margin-bottom: auto;
-  left: -20px;
+  left: -25px;
 }
 
 .period7::before {
   content: "7";
   border-color: black;
   position: relative;
-  top: 40%;
   margin-top: auto;
   margin-bottom: auto;
-  left: -20px;
-} */
-
-.period-section-4 {
-  display: flex;
-  flex-direction: row;
-}
-
-.filler {
-  background-color: white;
-  border: 1px solid white;
-  width: 65px;
-  height: 65px;
-}
-
-.period-label {
-  background-color: white;
-  text-align: center;
-  height: 30px;
-  padding-bottom: 10px;
+  left: -25px;
 }
 
 .lan-act {
@@ -218,6 +242,8 @@ body {
   align-items: center;
   font-size: 12px;
 }
+
+/* Coloring elements based on type ( transition metal, non-metal, etc. */
 
 .noble {
   background-color: #ecb3c2
@@ -259,6 +285,7 @@ body {
   background-color: #c27fa5
 }
 
+/***************************MENU STYLING**************************/
 .menu {
   border: 1px solid #b6e2da;
   padding: 2rem;
@@ -269,7 +296,6 @@ body {
   border-radius: .25rem;
   position: relative;
 }
-
 
 .menu-content {
   left: 50%;
@@ -284,6 +310,7 @@ body {
   flex-direction: column;
 }
 
+/* Each selection in menu */
 .menu-select {
   padding: 1rem;
   height: 5%;
@@ -295,7 +322,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* color:rgb(71, 71, 71); */
   color: rgb(71, 71, 71);
 }
 
@@ -304,6 +330,7 @@ body {
   opacity: 92.5%;
 }
 
+/* Github and discord icons in menu */
 .fa-github {
   position: absolute;
   left: 0;
