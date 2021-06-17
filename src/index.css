@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 .home-div {
@@ -312,70 +313,112 @@ body {
 }
 
 /***************************MENU STYLING**************************/
+
 .menu {
-  border: 1px solid #b6e2da;
-  padding: 2rem;
-  height: 50vh;
-  width: 15%;
-  margin: auto 2rem;
-  background-color: lightblue;
-  border-radius: .25rem;
-  position: relative;
+  height: 6%; 
+  width: 100%;
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  background-color: #e4626f;
+  transition: 0.5s;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.menu div {
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  transition: 0.3s;
+}
+
+.menu div:hover {
+  color: #f1f1f1;
+}
+
+
 .menu-content {
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 80%;
-  position: absolute;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  align-content: center;
+  max-height: 80%;
+  width: 40%;
 }
 
-/* Each selection in menu */
 .menu-select {
-  padding: 1rem;
-  height: 5%;
-  width: 80%;
-  border: 1px solid white;
+  padding: .4rem .5rem;
   text-align: center;
-  background-color: #94bee2;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(71, 71, 71);
+  width: fit-content;
+  height: 30%;
+  border-radius: 1rem;
 }
 
-.menu-select:hover {
-  cursor: pointer;
-  opacity: 92.5%;
+.menu-select span {
+  font-size: 20px;
+  transition: color .3s;
+  /* color: rgb(37, 37, 37); */
+  color: whitesmoke;
 }
 
-/* Github and discord icons in menu */
+.menu-select span i  {
+  padding: 0 4px;
+}
+
+
 .fa-github {
-  position: absolute;
-  left: 0;
-  padding: 1rem;
-  bottom: 0;
-  font-size: 25px;
-  color: rgb(71, 71, 71);
+  /* color: rgb(37, 37, 37); */
+  color: white;
+  font-size: 30px;
+  padding: 0 2rem;
+  transition: color .3s;
 }
 
-.fa-discord {
-  position: absolute;
-  right: 0;
-  padding: 1rem;
-  bottom: 0;
-  font-size: 25px;
-  color: rgb(71, 71, 71);
-}
-
-.fab:hover {
+.menu-select span:hover, .fa-github:hover{
   cursor: pointer;
-  opacity: 92.5%;
+  color: rgb(207, 205, 205);
+  transition: color .3s;
+  
 }
+
+/* Dropdown menu */
+
+.dropbtn {
+  color: white;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1000;
+  top: 30px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
