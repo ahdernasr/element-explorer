@@ -1,4 +1,3 @@
-
 /***************************COMMON STYLING**************************/
 
 body {
@@ -13,6 +12,10 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh;
+}
+
+.hidden {
+  display: none;
 }
 
 /***************************PERIODIC TABLE STYLING**************************/
@@ -68,7 +71,8 @@ body {
 }
 
 /* Period styling */
-.period, .multi-period {
+.period,
+.multi-period {
   display: flex;
   width: 100%;
 }
@@ -124,7 +128,7 @@ body {
 /* Styling for key table that shows specifc data of element on an element's hover */
 .key {
   border: 2px solid white;
-  background-color: mistyrose;
+  background-color: #e4626f;
   height: 197px;
   width: 465px;
   display: flex;
@@ -132,6 +136,7 @@ body {
   flex-direction: row;
   align-items: center;
   font-weight: 500;
+  position: relative;
 }
 
 .key td {
@@ -139,24 +144,44 @@ body {
   color: midnightblue;
   border: 1px solid rgb(134, 133, 133);
   padding: 0.5rem 0.5rem;
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
-  min-width: 3.75rem;
-  max-width: 3.75rem;
+  min-width: 3.95rem;
+  max-width: 3.95rem;
   min-height: 1rem;
   max-height: 1rem;
-  margin-left: 0.1rem
+  margin-left: 0.1rem;
+  /* background-color: rgb(235, 223, 221); */
+  background-color: rgb(253, 241, 239);
+  font-weight: 600;
 }
 
 .key th {
-   display: inline-block;
+  display: inline-block;
   font-weight: 400;
   color: steelblue;
   border: 1px solid rgb(134, 133, 133);
   padding: 0.5rem 0.2rem;
-  font-size: 13px;
+  font-size: 14px;
   min-width: 8rem;
   min-height: 1rem;
+  background-color: rgb(253, 241, 239);
+  font-weight: 600;
+}
+
+.labels {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.labels table th {
+  width: 10rem;
+  color: black;
+  font-weight: 600;
+  border: 1px solid black;
 }
 
 /* Flip from Key to Data button */
@@ -170,6 +195,7 @@ body {
   cursor: pointer;
   opacity: 90%;
 }
+
 /* Period labels (left-hand side labels) */
 
 .period1::before {
@@ -246,43 +272,43 @@ body {
 /* Coloring elements based on type ( transition metal, non-metal, etc. */
 
 .noble {
-  background-color: #ecb3c2
+  background-color: #ecb3c2 !important
 }
 
 .non-metal {
-  background-color: #c4d8e8
+  background-color: #c4d8e8 !important
 }
 
 .alkali {
-  background-color: #da6b5c
+  background-color: #da6b5c  !important
 }
 
 .alkaline {
-  background-color: #f2b579
+  background-color: #f2b579 !important
 }
 
 .transition {
-  background-color: #ecd18d
+  background-color: #ecd18d !important
 }
 
 .basic {
-  background-color: #8ccabc
+  background-color: #8ccabc !important
 }
 
 .metalloid {
-  background-color: #b6e2da
+  background-color: #b6e2da !important
 }
 
 .halogen {
-  background-color: #94bee2
+  background-color: #94bee2 !important
 }
 
 .lanthanides {
-  background-color: #d4acc0
+  background-color: #d4acc0 !important
 }
 
 .actinides {
-  background-color: #c27fa5
+  background-color: #c27fa5 !important
 }
 
 /***************************MENU STYLING**************************/
