@@ -273,43 +273,43 @@ body {
 /* Coloring elements based on type ( transition metal, non-metal, etc. */
 
 .noble {
-  background-color: #ecb3c2 !important
+  background-color: #ecb3c2 
 }
 
 .non-metal {
-  background-color: #c4d8e8 !important
+  background-color: #c4d8e8 
 }
 
 .alkali {
-  background-color: #da6b5c  !important
+  background-color: #da6b5c  
 }
 
 .alkaline {
-  background-color: #f2b579 !important
+  background-color: #f2b579 
 }
 
 .transition {
-  background-color: #ecd18d !important
+  background-color: #ecd18d 
 }
 
 .basic {
-  background-color: #8ccabc !important
+  background-color: #8ccabc 
 }
 
 .metalloid {
-  background-color: #b6e2da !important
+  background-color: #b6e2da 
 }
 
 .halogen {
-  background-color: #94bee2 !important
+  background-color: #94bee2 
 }
 
 .lanthanides {
-  background-color: #d4acc0 !important
+  background-color: #d4acc0 
 }
 
 .actinides {
-  background-color: #c27fa5 !important
+  background-color: #c27fa5 
 }
 
 /***************************MENU STYLING**************************/
