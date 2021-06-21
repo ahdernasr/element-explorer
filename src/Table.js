@@ -15,10 +15,12 @@ const Table = () => {
     density = useRef(),
     atomicRadius = useRef();
 
-  const [atomicNumber, setAtomicNumber] = useState('Atomic Number');
-  const [symbol, setSymbol] = useState('Symbol');
-  const [elementName, setElementName] = useState('Element Name');
-  const [relativeAtomicMass, setRelativeAtomicMass] = useState('Relative Atomic Mass');
+  const [atomicNumber, setAtomicNumber] = useState("Atomic Number");
+  const [symbol, setSymbol] = useState("Symbol");
+  const [elementName, setElementName] = useState("Element Name");
+  const [relativeAtomicMass, setRelativeAtomicMass] = useState(
+    "Relative Atomic Mass"
+  );
 
   const switchKeyHandler = () => {
     for (let q of document.getElementsByClassName("data-tables")) {
@@ -77,12 +79,11 @@ const Table = () => {
     setAtomicNumber(element.firstElementChild.children[0].textContent);
     setSymbol(element.firstElementChild.children[1].textContent);
     setElementName(element.firstElementChild.children[2].textContent);
-    setRelativeAtomicMass(element.firstElementChild.children[3].textContent)
+    setRelativeAtomicMass(element.firstElementChild.children[3].textContent);
 
     atomicNumberEl.current.parentElement.parentElement.className = `preview ${
       element.className.split(" ")[element.className.split(" ").length - 1]
     }`;
-
   };
 
   const hoverHandler = (event, element) => {

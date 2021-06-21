@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import useFetch from "./useFetch";
 import * as useTrends from "./useTrends";
@@ -34,24 +35,13 @@ const Navbar = () => {
   return (
     <div className="menu">
       <div className="logo">
-        <i className="fab fa-github"></i>
+        <a href="http://www.github.com/ahdernasr/periodic-table" className="fab fa-github"></a>
+        <a href="/" className="fas fa-home"></a>
       </div>
       <div className="menu-content">
-        <div className="menu-select">
-          <a href="/">Table</a>
-        </div>
-        <div className="menu-select">
-          <span>Play</span>
-        </div>
-        <div className="menu-select">
-          <span>Timeline</span>
-        </div>
-        <div className="menu-select">
-          <span>Scientists</span>
-        </div>
         <div className="menu-select dropdown">
           <span className="dropbtn">
-            Trends<i className="fas fa-angle-down"> </i>
+            Trends<i className="fas fa-angle-down"></i>
           </span>
           <div className="dropdown-content">
             <a onClick={showDensity}>Density</a>

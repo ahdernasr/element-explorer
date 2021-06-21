@@ -1,9 +1,7 @@
 import Navbar from "./Navbar";
 import Table from "./Table";
 import TrendKey from "./TrendKey";
-import Timeline from "./Timeline";
-import Play from "./Play";
-import Scientists from "./Scientists";
+import ElementInfo from "./ElementInfo";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NotFound from "./NotFound";
 
@@ -17,14 +15,8 @@ function App() {
             <Table />
             <TrendKey />
           </Route>
-          <Route path="/timeline">
-            <Timeline />
-          </Route>
-          <Route path="/play">
-            <Play />
-          </Route>
-          <Route path="/scientists">
-            <Scientists />
+          <Route path="/info/:elementName">
+            <ElementInfo />
           </Route>
           <Route path="*">
             <NotFound />

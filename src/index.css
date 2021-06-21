@@ -400,13 +400,7 @@ body {
 
 
 .menu-content {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  align-content: center;
-  max-height: 80%;
-  width: 40%;
+  padding: 0.2rem 3rem;
 }
 
 .menu-select {
@@ -439,23 +433,26 @@ body {
   padding: 0 4px;
 }
 
-.menu-select a, .menu-select a:hover, .menu-select a:visited, .menu-select a:active {
+.menu-select a, .menu-select a:hover, .menu-select a:visited, .menu-select a:active, .fa-github, .fa-home {
   text-decoration: none;
  }
 
-.fa-github {
+.fa-github, .fa-home {
   /* color: rgb(37, 37, 37); */
   color: white;
   font-size: 30px;
-  padding: 0 2rem;
+  padding: 0 1rem;
   transition: color .3s;
 }
 
-.menu-select span:hover, .fa-github:hover, .menu-select a:hover{
+.fa-github {
+  padding-left: 2rem;
+}
+
+.menu-select span:hover, .fa-github:hover, .menu-select a:hover, .fa-home:hover{
   cursor: pointer;
   color: rgb(207, 205, 205);
   transition: color .3s;
-  
 }
 
 .menu-select div a:hover {
@@ -495,3 +492,40 @@ body {
 
 .dropdown:hover .dropdown-content {display: block;}
 
+/****************Info Boxes******************/
+
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info h1 {
+  padding-bottom: 3rem;
+  letter-spacing: 0.075rem;
+  font-size: 50px;
+}
+
+.info-box {
+  width: fit-content;
+  height: fit-content;
+  border: 4px solid #e4626f;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.info-slot {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+
+.info-slot p {
+  color: #363636;
+}
+.info-title {
+  color: navy !important;
+}
