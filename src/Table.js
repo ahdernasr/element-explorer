@@ -102,6 +102,9 @@ const Table = () => {
   useEffect(() => {
     for (let i of document.getElementsByClassName("table-element")) {
       i.addEventListener("mouseover", (e) => hoverHandler(e, i));
+      i.addEventListener("click", (e) => {
+        window.location = `/info/${i.firstElementChild.children[2].textContent.toLowerCase()}`
+      });
     }
   });
 

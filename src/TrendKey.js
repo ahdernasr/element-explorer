@@ -1,27 +1,27 @@
 const TrendKey = () => {
   return (
-    <div class="trend-label">
-      <div class="density-label">
+    <div className="trend-label">
+      <div className="density-label">
         <p>Low density</p>
         <p>High density</p>
       </div>
-      <div class="radius-label">
+      <div className="radius-label">
         <p>Low radius</p>
         <p>High radius</p>
       </div>
-      <div class="electronegativity-label">
+      <div className="electronegativity-label">
         <p>Low electronegativity</p>
         <p>High electronegativity</p>
       </div>
-      <div class="melting-label">
+      <div className="melting-label">
         <p>Low melting</p>
         <p>High melting</p>
       </div>
-      <div class="boiling-label">
+      <div className="boiling-label">
         <p>Low boiling</p>
         <p>High boiling</p>
       </div>
-      <div class="ie-label">
+      <div className="ie-label">
         <p>Low First IE</p>
         <p>High First IE</p>
       </div>

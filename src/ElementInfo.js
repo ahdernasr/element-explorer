@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
@@ -26,7 +25,6 @@ const ElementInfo = () => {
       element[i] = capitalizeFirstLetter(element[i]);
     }
   }
-  console.log(element);
   return (
     <div className="info">
       <h1>{element.name}-{parseInt(element.atomicMass).toFixed(0)}</h1>
