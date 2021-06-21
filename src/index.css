@@ -129,7 +129,7 @@ body {
 /* Styling for key table that shows specifc data of element on an element's hover */
 .key {
   border: 2px solid white;
-  background-color: #e4626f;
+  background-color: lightgray;
   height: 197px;
   width: 465px;
   display: flex;
@@ -143,7 +143,7 @@ body {
 .key td {
   display: inline-block;
   color: midnightblue;
-  border: 1px solid rgb(134, 133, 133);
+  border: 1px solid  #e4626f;
   padding: 0.5rem 0.5rem;
   font-size: 14px;
   text-align: center;
@@ -161,7 +161,7 @@ body {
   display: inline-block;
   font-weight: 400;
   color: steelblue;
-  border: 1px solid rgb(134, 133, 133);
+  border: 1px solid  #e4626f;
   padding: 0.5rem 0.2rem;
   font-size: 14px;
   min-width: 8rem;
@@ -185,6 +185,25 @@ body {
   border: 1px solid black;
 }
 
+.trend-label {
+  border: 1px solid black;
+  display: none;
+}
+
+.trend-label div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dadada;
+}
+
+.trend-label div p {
+  padding: 1rem;
+  border: 1px solid black;
+  margin: 1rem 1rem;
+  color: black;
+  font-weight: 600;
+}
 /* Flip from Key to Data button */
 
 .fa-exchange-alt {
@@ -312,6 +331,46 @@ body {
   background-color: #c27fa5 
 }
 
+.noble-key {
+  background-color: #ecb3c2 !important
+}
+
+.non-metal-key {
+  background-color: #c4d8e8 !important
+}
+
+.alkali-key {
+  background-color: #da6b5c  !important
+}
+
+.alkaline-key {
+  background-color: #f2b579 !important
+}
+
+.transition-key {
+  background-color: #ecd18d !important
+}
+
+.basic-key {
+  background-color: #8ccabc !important
+}
+
+.metalloid-key {
+  background-color: #b6e2da !important
+}
+
+.halogen-key {
+  background-color: #94bee2 !important
+}
+
+.lanthanides-key {
+  background-color: #d4acc0 !important
+}
+
+.actinides-key {
+  background-color: #c27fa5 !important
+}
+
 /***************************MENU STYLING**************************/
 
 .menu {
@@ -369,10 +428,20 @@ body {
   color: whitesmoke;
 }
 
+.menu-select a {
+  font-size: 20px;
+  transition: color .3s;
+  /* color: rgb(37, 37, 37); */
+  color: whitesmoke;
+}
+
 .menu-select span i  {
   padding: 0 4px;
 }
 
+.menu-select a, .menu-select a:hover, .menu-select a:visited, .menu-select a:active {
+  text-decoration: none;
+ }
 
 .fa-github {
   /* color: rgb(37, 37, 37); */
@@ -382,11 +451,15 @@ body {
   transition: color .3s;
 }
 
-.menu-select span:hover, .fa-github:hover{
+.menu-select span:hover, .fa-github:hover, .menu-select a:hover{
   cursor: pointer;
   color: rgb(207, 205, 205);
   transition: color .3s;
   
+}
+
+.menu-select div a:hover {
+  color: gray;
 }
 
 /* Dropdown menu */

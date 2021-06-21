@@ -1,14 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useFetch from "./useFetch";
 
 //sfc
 const Table = () => {
   const { elementsArray } = useFetch();
 
-  let atomicNumber = useRef(),
-    symbol = useRef(),
-    elementName = useRef(),
-    relativeAtomicMass = useRef(),
+  let atomicNumberEl = useRef(),
     standardState = useRef(),
     ionizationEnergy = useRef(),
     electronAffinity = useRef(),
@@ -17,6 +14,11 @@ const Table = () => {
     discovered = useRef(),
     density = useRef(),
     atomicRadius = useRef();
+
+  const [atomicNumber, setAtomicNumber] = useState('Atomic Number');
+  const [symbol, setSymbol] = useState('Symbol');
+  const [elementName, setElementName] = useState('Element Name');
+  const [relativeAtomicMass, setRelativeAtomicMass] = useState('Relative Atomic Mass');
 
   const switchKeyHandler = () => {
     for (let q of document.getElementsByClassName("data-tables")) {
@@ -72,17 +74,15 @@ const Table = () => {
   };
 
   const updatePreview = (element) => {
-    atomicNumber.current.innerHTML =
-      element.firstElementChild.children[0].textContent;
-    symbol.current.innerHTML =
-      element.firstElementChild.children[1].textContent;
-    elementName.current.innerHTML =
-      element.firstElementChild.children[2].textContent;
-    relativeAtomicMass.current.innerHTML =
-      element.firstElementChild.children[3].textContent;
-    atomicNumber.current.parentElement.parentElement.className = `preview ${
+    setAtomicNumber(element.firstElementChild.children[0].textContent);
+    setSymbol(element.firstElementChild.children[1].textContent);
+    setElementName(element.firstElementChild.children[2].textContent);
+    setRelativeAtomicMass(element.firstElementChild.children[3].textContent)
+
+    atomicNumberEl.current.parentElement.parentElement.className = `preview ${
       element.className.split(" ")[element.className.split(" ").length - 1]
     }`;
+
   };
 
   const hoverHandler = (event, element) => {
@@ -98,17 +98,11 @@ const Table = () => {
     }
   };
 
-  const showDensity = () => {
-
-  }
-
   useEffect(() => {
     for (let i of document.getElementsByClassName("table-element")) {
       i.addEventListener("mouseover", (e) => hoverHandler(e, i));
     }
-    showDensity()
   });
-
 
   return (
     <div className="periodic-table">
@@ -222,10 +216,10 @@ const Table = () => {
           <div className="preview">
             {" "}
             <div>
-              <h3 ref={atomicNumber}>Atomic Number</h3>
-              <h1 ref={symbol}>Symbol</h1>
-              <h3 ref={elementName}>Element</h3>
-              <h3 ref={relativeAtomicMass}>Relative Atomic Mass</h3>
+              <h3 ref={atomicNumberEl}>{atomicNumber}</h3>
+              <h1>{symbol}</h1>
+              <h3>{elementName}</h3>
+              <h3>{relativeAtomicMass}</h3>
             </div>
           </div>
         </div>
@@ -275,38 +269,38 @@ const Table = () => {
               <table>
                 <tbody>
                   <tr>
-                    <th className="alkali">Alkali metals</th>
+                    <th className="alkali-key">Alkali metals</th>
                   </tr>
                   <tr>
-                    <th className="transition">Transition metals</th>
+                    <th className="transition-key">Transition metals</th>
                   </tr>
                   <tr>
-                    <th className="non-metal">Non-metals</th>
+                    <th className="non-metal-key">Non-metals</th>
                   </tr>
                   <tr>
-                    <th className="metalloid">Metalloids</th>
+                    <th className="metalloid-key">Metalloids</th>
                   </tr>
                   <tr>
-                    <th className="lanthanides">Lanthanides</th>
+                    <th className="lanthanides-key">Lanthanides</th>
                   </tr>
                 </tbody>
               </table>
               <table>
                 <tbody>
                   <tr>
-                    <th className="alkaline">Alkaline metals</th>
+                    <th className="alkaline-key">Alkaline metals</th>
                   </tr>
                   <tr>
-                    <th className="noble">Noble Gases</th>
+                    <th className="noble-key">Noble Gases</th>
                   </tr>
                   <tr>
-                    <th className="halogen">Halogens</th>
+                    <th className="halogen-key">Halogens</th>
                   </tr>
                   <tr>
-                    <th className="basic">Basic metals</th>
+                    <th className="basic-key">Basic metals</th>
                   </tr>
                   <tr>
-                    <th className="actinides">Actinides</th>
+                    <th className="actinides-key">Actinides</th>
                   </tr>
                 </tbody>
               </table>
