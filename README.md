@@ -22,16 +22,15 @@ Click on any element to redirect to a page with more information on the chosen e
 
 You can also directly do:
 
-https://link.com/info/{element name}
+https://link.com/info/{element-name}
 
 or if you're locally hosting it
 
-http://localhost:3000/info/{element name}
+http://localhost:3000/info/{element-name}
 
 `Trends`
 
 Click on the trends menu at the right side of the navigation bar. Different chemical trends will appear, and simply select any of them to explore the different trends on the periodic table.
-
 
 ## Todo
 
