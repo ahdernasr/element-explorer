@@ -1,8 +1,43 @@
 ## Element-Explorer
 
-Element explorer is an interactive periodic table that shows the usual information of a periodic table but in a more visual manner.
+Element-Explorer is an interactive periodic table made with React.js that shows the usual information of a periodic table but in a more visual manner.
 
 It is also displays additional specific information on each element (i.e. density, atomic radius, etc.), as well as certain periodic trends (i.e. electronegativity, melting point, etc.)
+
+This is AhuNasr#0113's submission for Timathon 2021 (June - July)
+
+## How to use
+
+`Hovering`
+
+Hover over any element to magnify it in the preview box, and to see quick information in the information box.
+
+`Key`
+
+Click on the key which is directly under the label for group 13 to switch between the color key showing what group blocks the colors represent (i.e. halogens, transition metals, etc.) and a table showing information/data on the element. 
+
+`Clicking Elements`
+
+Click on any element to redirect to a page with more information on the chosen element.
+
+You can also directly do:
+
+https://link.com/info/{element name}
+
+or if you're locally hosting it
+
+http://localhost:3000/info/{element name}
+
+`Trends`
+
+Click on the trends menu at the right side of the navigation bar. Different chemical trends will appear, and simply select any of them to explore the different trends on the periodic table.
+
+
+## Todo
+
+- Better trend colours
+- More info on element info page 
+- Better responsiveness
 
 ## Dependencies
 
@@ -16,13 +51,8 @@ It is also displays additional specific information on each element (i.e. densit
 - react-scripts: 4.0.3"
 - web-vitals: ^1.0.1
 
-## Todo
 
-- Better trend colours
-- More info on element info page 
-- Better responsiveness
-
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
