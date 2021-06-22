@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <div className="menu">
       <div className="logo">
-        <a href="http://www.github.com/ahdernasr/periodic-table" className="fab fa-github"></a>
+        <a target="_blank" href="http://www.github.com/ahdernasr/periodic-table" className="fab fa-github"></a>
         <a href="/" className="fas fa-home"></a>
       </div>
       <div className="menu-content">

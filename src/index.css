@@ -99,7 +99,7 @@ body {
 /* Styling for box that previews hovered on element */
 .preview {
   border: 2px solid white;
-  background-color: pink;
+  background-color: #e4626f;
   height: 197px;
   width: 197px;
   display: flex;
