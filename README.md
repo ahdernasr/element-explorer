@@ -1,6 +1,6 @@
-## Element-Explorer
+## Element Explorer
 
-Element-Explorer is an interactive periodic table made with React.js that shows the usual information of a periodic table but in a more visual manner.
+Element Explorer is an interactive periodic table made with React.js that shows the usual information of a periodic table but in a more visual manner.
 
 It is also displays additional specific information on each element (i.e. density, atomic radius, etc.), as well as certain periodic trends (i.e. electronegativity, melting point, etc.)
 
