@@ -2,23 +2,33 @@
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
+// Component that shows additional information on the chemical element
+// Once its clicked
+
 const ElementInfo = () => {
+  // element name is taken from /info/{element-name}
   const { elementName } = useParams();
   const { elementsArray } = useFetch();
 
+  // Function that capitalizes first letter for visual improvements
   const capitalizeFirstLetter = (word) => {
     let newWord = "",
       tempWord;
     tempWord = word.split("");
+    // capitalise first letter, add it to the new word
     newWord += tempWord[0].toUpperCase();
+    // add the rest of the word to the new word
     for (let i = 1; i < word.length; i++) {
       newWord += tempWord[i];
     }
     return newWord;
   };
 
+  // Find the chosen element's info by searching for it in the fetched elements array
+  // (elementsArray is from the periodic-table npm wrapper)
   let element = elementsArray[capitalizeFirstLetter(elementName)];
 
+  // If any of the objects property's have a blank piece of information, replace with N/A
   for (let i in element) {
     if (element[i].length < 1) {
       element[i] = "N/A";
@@ -26,6 +36,7 @@ const ElementInfo = () => {
       element[i] = capitalizeFirstLetter(element[i]);
     }
   }
+  
   return (
     <div className="info">
       <h1>{element.name}-{parseInt(element.atomicMass).toFixed(0)}</h1>

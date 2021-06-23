@@ -372,7 +372,7 @@ body {
   background-color: #c27fa5 !important
 }
 
-/***************************MENU STYLING**************************/
+/***************************MENU (NAVBAR) STYLING**************************/
 
 .menu {
   height: 6%; 
@@ -398,7 +398,6 @@ body {
 .menu div:hover {
   color: #f1f1f1;
 }
-
 
 .menu-content {
   padding: 0.2rem 3rem;
@@ -558,4 +557,29 @@ body {
 .info-title {
   color: navy !important;
   font-weight: 600;
+}
+
+/***********404 PAGE************/
+
+.page-not-found {
+  text-align: center;
+}
+
+.page-not-found h1 {
+  color: #e4626f;
+  font-size: 20rem;
+  padding: 0;
+  margin: 0;
+}
+
+.page-not-found h2 {
+  color: #e4626f;
+  font-size: 1.5rem;
+}
+
+.page-not-found h3 a {
+  color: rgb(107, 194, 223);
+  cursor: pointer;
+  border-bottom: 1px solid #e4626f;
+  text-decoration: none;
 }

@@ -10,8 +10,8 @@ const TrendKey = () => {
         <p>High radius</p>
       </div>
       <div className="electronegativity-label">
-        <p>Low electronegativity</p>
-        <p>High electronegativity</p>
+        <p>Low E<sup>-</sup> negativity</p>
+        <p>High E<sup>-</sup> negativity</p>
       </div>
       <div className="melting-label">
         <p>Low melting</p>

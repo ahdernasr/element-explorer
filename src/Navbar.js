@@ -4,9 +4,13 @@ import useFetch from "./useFetch";
 import * as useTrends from "./useTrends";
 
 const Navbar = () => {
+  // Obtain element information object from periodictable npm-wrapper
   const { elementsArray } = useFetch();
+  // Obtain a list of every single (chemical) element for later use in functions
   let elementList = document.getElementsByClassName("table-element");
 
+  // Set of functions that call different functions to show the different trends
+  // from useTrends.js
   const showDensity = () => {
     useTrends.showDensity(elementsArray, elementList);
   };
@@ -31,7 +35,6 @@ const Navbar = () => {
     useTrends.showFirstIE(elementsArray, elementList);
   };
 
-  
   return (
     <div className="menu">
       <div className="logo">
@@ -39,19 +42,22 @@ const Navbar = () => {
         <a href="/" className="fas fa-home"></a>
       </div>
       <div className="menu-content">
-        <div className="menu-select dropdown">
-          <span className="dropbtn">
-            Trends<i className="fas fa-angle-down"></i>
-          </span>
-          <div className="dropdown-content">
-            <a onClick={showDensity}>Density</a>
-            <a onClick={showRadius}>Atomic radius</a>
-            <a onClick={showElectronegativity}>Electronegativity</a>
-            <a onClick={showMP}>Melting Point</a>
-            <a onClick={showBP}>Boiling Point</a>
-            <a onClick={showFirstIE}>First I.E.</a>
-          </div>
-        </div>
+      {/* If the user's location path is home, render the dropdown menu for trends*/}
+      {(window.location.pathname === "/") &&
+                <div className="menu-select dropdown">
+                <span className="dropbtn">
+                  Trends<i className="fas fa-angle-down"></i>
+                </span>
+                <div className="dropdown-content">
+                  <a onClick={showDensity}>Density</a>
+                  <a onClick={showRadius}>Atomic radius</a>
+                  <a onClick={showElectronegativity}>Electronegativity</a>
+                  <a onClick={showMP}>Melting Point</a>
+                  <a onClick={showBP}>Boiling Point</a>
+                  <a onClick={showFirstIE}>First I.E.</a>
+                </div>
+              </div>
+    }
       </div>
     </div>
   );
