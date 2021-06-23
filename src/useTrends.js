@@ -27,6 +27,9 @@ export const showDensity = (elementsArray, elementList) => {
     if (!elementsArray[i.firstElementChild.children[2].textContent].density) {
       i.style.backgroundColor = "lightgray";
     }
+    if (!elementsArray[i.firstElementChild.children[2].textContent].density) {
+      i.style.backgroundColor = "lightgray";
+    }
     i.style.opacity = "85%";
   }
 
@@ -42,6 +45,9 @@ export const showRadius = (elementsArray, elementList) => {
     // (2)
     i.style.backgroundColor = `rgb(127, 255, ${elementRadiusPercentage * 255})`;
     // (3)
+    if (!elementsArray[i.firstElementChild.children[2].textContent].atomicRadius) {
+      i.style.backgroundColor = "lightgray";
+    }
     if (!elementsArray[i.firstElementChild.children[2].textContent].atomicRadius) {
       i.style.backgroundColor = "lightgray";
     }
@@ -66,6 +72,10 @@ export const showElectronegativity = (elementsArray, elementList) => {
       .electronegativity) {
       i.style.backgroundColor = "lightgray";
     }
+    if (!elementsArray[i.firstElementChild.children[2].textContent]
+      .electronegativity) {
+      i.style.backgroundColor = "lightgray";
+    }
     i.style.opacity = "85%";
   }
 
@@ -83,6 +93,9 @@ export const showMP = (elementsArray, elementList) => {
       255 - elementMeltingPointPercentage * 255
     }, 0)`;
     // (3)
+    if (!elementsArray[i.firstElementChild.children[2].textContent].meltingPoint) {
+      i.style.backgroundColor = "lightgray";
+    }
     if (!elementsArray[i.firstElementChild.children[2].textContent].meltingPoint) {
       i.style.backgroundColor = "lightgray";
     }
@@ -106,6 +119,9 @@ export const showBP = (elementsArray, elementList) => {
     if (!elementsArray[i.firstElementChild.children[2].textContent].boilingPoint) {
       i.style.backgroundColor = "lightgray";
     }
+    if (!elementsArray[i.firstElementChild.children[2].textContent].boilingPoint) {
+      i.style.backgroundColor = "lightgray";
+    }
     i.style.opacity = "85%";
   }
 
@@ -123,6 +139,10 @@ export const showFirstIE = (elementsArray, elementList) => {
       255 - elementEnergyPercentage * 125
     }, ${elementEnergyPercentage * 255})`;
     // (3)
+    if (!elementsArray[i.firstElementChild.children[2].textContent]
+      .ionizationEnergy) {
+      i.style.backgroundColor = "lightgray";
+    }
     if (!elementsArray[i.firstElementChild.children[2].textContent]
       .ionizationEnergy) {
       i.style.backgroundColor = "lightgray";
