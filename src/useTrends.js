@@ -6,9 +6,9 @@
 //      percentage. This is done in different ways for different trends to show different
 //      color patterns using the rgb(r, g, b) color pallette
 // (3) if the trend is undefined or it is equal to 0, the color light gray is used
-// (4) style the key according to the color trend
 
 const hideDataElements = () => {
+  // Hides preview, key, and switch button since they are irrellevant when showing trends
   document.querySelector(".preview").style.opacity = "0%";
   document.querySelector(".key").style.opacity = "0%";
   document.querySelector(".fa-exchange-alt").style.opacity = "0%";
@@ -30,13 +30,6 @@ export const showDensity = (elementsArray, elementList) => {
     i.style.opacity = "85%";
   }
 
-  // (4)
-  // let label = document.querySelector(".trend-label");
-  // for (let i of label.children) {
-  //   i.style.display = "none";
-  // }
-  // label.style.display = "flex";
-  // label.children[0].style.display = "flex";
   hideDataElements();
 };
 
