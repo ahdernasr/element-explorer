@@ -22,7 +22,7 @@ Click on any element to redirect to a page with more information on the chosen e
 
 You can also directly do:
 
-https://link.com/info/{element-name}
+https://elementexplorer.herokuapp.com/info/{element-name}
 
 or if you're locally hosting it
 
@@ -37,6 +37,7 @@ Click on the trends menu at the right side of the navigation bar. Different chem
 - Better trend colours
 - More info on element info page 
 - Better responsiveness
+- Better/Clear Comments
 
 ## Dependencies
 
