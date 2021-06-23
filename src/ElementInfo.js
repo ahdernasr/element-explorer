@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
@@ -28,7 +29,7 @@ const ElementInfo = () => {
   return (
     <div className="info">
       <h1>{element.name}-{parseInt(element.atomicMass).toFixed(0)}</h1>
-      <a target="_blank" href={`https://en.wikipedia.org/wiki/${element.name.toLowerCase()}`} className="fas fa-info-circle"></a>
+      <a target="_blank" rel="noopener noreferrer" href={`https://en.wikipedia.org/wiki/${element.name.toLowerCase()}`} className="fas fa-info-circle"></a>
       <div className="info-box">
         <div className="info-slot">
           <p className="info-title">Atomic Mass</p>
