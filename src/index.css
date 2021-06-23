@@ -538,8 +538,10 @@ body {
 
 .info-slot {
   width: 15rem;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2rem 2rem;
   border: 2px solid #e4626f;
   transition: background-color .3s;
