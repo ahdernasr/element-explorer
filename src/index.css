@@ -5,7 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   overflow-x: hidden;
-  cursor:default;
+  cursor: default;
 }
 
 .home-div {
@@ -36,17 +36,17 @@ body {
   flex-direction: column;
   justify-content: center;
   border: 1px solid white;
-  width: 65px;
-  height: 65px;
+  width: 85px;
+  height: 85px;
 }
 
 .table-element h1 {
-  font-size: 19px;
+  font-size: 24px;
   margin: 0;
 }
 
 .table-element h3 {
-  font-size: 9.5px;
+  font-size: 12px;
   margin: 0;
 }
 
@@ -65,11 +65,16 @@ body {
 .filler {
   background-color: white;
   border: 1px solid white;
-  width: 65px;
-  height: 65px;
+  width: 85px;
+  height: 85px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.middle-filler {
+  width: 42.5px;
+  height: 42.5px;
 }
 
 /* Period styling */
@@ -100,8 +105,8 @@ body {
 .preview {
   border: 2px solid white;
   background-color: #e4626f;
-  height: 197px;
-  width: 197px;
+  height: 257px;
+  width: 257px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,13 +114,13 @@ body {
 
 .preview h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 55px;
   padding-bottom: 0.75rem;
 }
 
 .preview h3 {
   margin: 0;
-  font-size: 15px;
+  font-size: 18px;
   padding-bottom: 0.75rem;
 }
 
@@ -131,8 +136,8 @@ body {
 .key {
   border: 2px solid white;
   background-color: rgb(245, 229, 220);
-  height: 197px;
-  width: 465px;
+  height: 257px;
+  width: 605px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -143,13 +148,14 @@ body {
 
 .key td {
   display: inline-block;
+  vertical-align: middle;
   color: midnightblue;
-  border: 1px solid  #e4626f;
+  border: 1px solid #e4626f;
   padding: 0.5rem 0.5rem;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
-  min-width: 3.95rem;
-  max-width: 3.95rem;
+  min-width: 5.95rem;
+  max-width: 5.95rem;
   min-height: 1rem;
   max-height: 1rem;
   margin-left: 0.1rem;
@@ -161,11 +167,12 @@ body {
 .key th {
   display: inline-block;
   font-weight: 400;
+  vertical-align: middle;
   color: steelblue;
-  border: 1px solid  #e4626f;
+  border: 1px solid #e4626f;
   padding: 0.5rem 0.2rem;
-  font-size: 14px;
-  min-width: 8rem;
+  font-size: 16px;
+  min-width: 10rem;
   min-height: 1rem;
   background-color: rgb(253, 241, 239);
   font-weight: 600;
@@ -199,12 +206,12 @@ body {
 }
 
 .density-label p {
-  background-image: linear-gradient(to bottom right, rgb(0, 255, 255), rgb(0, 0, 255) );
+  background-image: linear-gradient(to bottom right, rgb(0, 255, 255), rgb(0, 0, 255));
   color: white;
 }
 
 .radius-label p {
-  background-image: linear-gradient(to bottom right, rgb(127, 255, 0), rgb(127, 255, 255) );
+  background-image: linear-gradient(to bottom right, rgb(127, 255, 0), rgb(127, 255, 255));
   color: black;
 }
 
@@ -228,18 +235,13 @@ body {
   color: black;
 }
 
-
-
-
-
-
-
 .trend-label div p {
   padding: 1rem;
   border: 1px solid black;
   margin: 1rem 1rem;
   font-weight: 600;
 }
+
 /* Flip from Key to Data button */
 
 .fa-exchange-alt {
@@ -328,43 +330,43 @@ body {
 /* Coloring elements based on type ( transition metal, non-metal, etc. */
 
 .noble {
-  background-color: #ecb3c2 
+  background-color: #ecb3c2
 }
 
 .non-metal {
-  background-color: #c4d8e8 
+  background-color: #c4d8e8
 }
 
 .alkali {
-  background-color: #da6b5c  
+  background-color: #da6b5c
 }
 
 .alkaline {
-  background-color: #f2b579 
+  background-color: #f2b579
 }
 
 .transition {
-  background-color: #ecd18d 
+  background-color: #ecd18d
 }
 
 .basic {
-  background-color: #8ccabc 
+  background-color: #8ccabc
 }
 
 .metalloid {
-  background-color: #b6e2da 
+  background-color: #b6e2da
 }
 
 .halogen {
-  background-color: #94bee2 
+  background-color: #94bee2
 }
 
 .lanthanides {
-  background-color: #d4acc0 
+  background-color: #d4acc0
 }
 
 .actinides {
-  background-color: #c27fa5 
+  background-color: #c27fa5
 }
 
 .noble-key {
@@ -376,7 +378,7 @@ body {
 }
 
 .alkali-key {
-  background-color: #da6b5c  !important
+  background-color: #da6b5c !important
 }
 
 .alkaline-key {
@@ -410,10 +412,10 @@ body {
 /***************************MENU (NAVBAR) STYLING**************************/
 
 .menu {
-  height: 6%; 
+  height: 6%;
   width: 100%;
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 1;
   top: 0;
   background-color: #e4626f;
   transition: 0.5s;
@@ -464,18 +466,24 @@ body {
   color: whitesmoke;
 }
 
-.menu-select span i  {
+.menu-select span i {
   padding: 0 4px;
 }
 
-.menu-select a, .menu-select a:hover, .menu-select a:visited, .menu-select a:active, .fa-github, .fa-home {
+.menu-select a,
+.menu-select a:hover,
+.menu-select a:visited,
+.menu-select a:active,
+.fa-github,
+.fa-home {
   text-decoration: none;
- }
+}
 
-.fa-github, .fa-home {
+.fa-github,
+.fa-home {
   /* color: rgb(37, 37, 37); */
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   padding: 0 1rem;
   transition: color .3s;
 }
@@ -484,7 +492,10 @@ body {
   padding-left: 2rem;
 }
 
-.menu-select span:hover, .fa-github:hover, .menu-select a:hover, .fa-home:hover{
+.menu-select span:hover,
+.fa-github:hover,
+.menu-select a:hover,
+.fa-home:hover {
   cursor: pointer;
   color: rgb(207, 205, 205);
   transition: color .3s;
@@ -523,9 +534,13 @@ body {
   font-size: 16px;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /****************Info Boxes******************/
 
@@ -548,14 +563,14 @@ body {
 }
 
 .info a {
- position: absolute;
- top: 0;
- right: 0;
- padding: .75%;
- margin-right: 1rem;
- font-size: 2rem;
- color: rgb(0, 34, 128);
- text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .75%;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: rgb(0, 34, 128);
+  text-decoration: none;
 }
 
 .info a:hover {
@@ -591,6 +606,7 @@ body {
   color: #363636;
   font-weight: 600;
 }
+
 .info-title {
   color: navy !important;
   font-weight: 600;
@@ -619,4 +635,227 @@ body {
   cursor: pointer;
   border-bottom: 1px solid #e4626f;
   text-decoration: none;
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 2000px) {
+
+  /* Styling for each square containing information (element squares) */
+  .table-element {
+    width: 65px;
+    height: 65px;
+  }
+
+  .table-element h1 {
+    font-size: 19px;
+  }
+
+  .table-element h3 {
+    font-size: 8.5px;
+  }
+
+  /* Filler elements (white blocks) */
+  .filler {
+    width: 65px;
+    height: 65px;
+  }
+
+  .middle-filler {
+    width: 32.5px;
+    height: 32.5px;
+  }
+
+  /* Styling for box that previews hovered on element */
+  .preview {
+    height: 197px;
+    width: 197px;
+  }
+
+  .preview h1 {
+    font-size: 40px;
+  }
+
+  .preview h3 {
+    font-size: 15px;
+  }
+
+  /* Styling for key table that shows specifc data of element on an element's hover */
+  .key {
+    height: 197px;
+    width: 465px;
+  }
+
+  .key td {
+    font-size: 12px;
+    min-width: 3.95rem;
+    max-width: 3.95rem;
+    min-height: 1rem;
+    max-height: 1rem;
+    vertical-align: middle;
+    margin-left: 0.1rem;
+  }
+
+  .key th {
+    padding: 0.5rem 0.2rem;
+    font-size: 12px;
+    min-width: 8rem;
+    max-width: 8rem;
+    min-height: 1rem;
+    vertical-align: middle;
+    max-height: 1rem;
+  }
+
+  .labels table th {
+    width: 10rem
+  }
+
+  /* Menu styling */
+
+  .menu div {
+    font-size: 20px;
+  }
+
+  .menu a {
+    font-size: 22.5px;
+  }
+
+  .menu-content {
+    padding: 0.2rem 3rem;
+  }
+
+  .menu-select {
+    padding: .4rem .5rem;
+    height: 30%;
+  }
+
+  .menu-select span {
+    font-size: 17.5px;
+  }
+
+  .menu-select a {
+    font-size: 20px;
+  }
+
+  .dropdown-content a {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 1300px) {
+
+  /* Styling for each square containing information (element squares) */
+  .table-element {
+    width: 50px;
+    height: 50px;
+  }
+
+  .table-element h1 {
+    font-size: 15px;
+  }
+
+  .table-element h3 {
+    font-size: 7.5px;
+  }
+
+  .period-label {
+    background-color: white;
+    text-align: center;
+    height: 10px;
+    padding-bottom: 0px;
+    margin-bottom: -5px;
+  }
+
+  /* Filler elements (white blocks) */
+  .filler {
+    width: 50px;
+    height: 50px;
+  }
+
+  .middle-filler {
+    width: 22.5px;
+    height: 22.5px;
+  }
+
+  /* Styling for box that previews hovered on element */
+  .preview {
+    height: 152px;
+    width: 152px;
+  }
+
+  .preview h1 {
+    font-size: 22.5px;
+  }
+
+  .preview h3 {
+    font-size: 11px;
+  }
+
+  /* Styling for key table that shows specifc data of element on an element's hover */
+  .key {
+    height: 152px;
+    width: 360px;
+  }
+
+  .key td {
+    font-size: 10px;
+    min-width: 3.2rem;
+    max-width: 3.2rem;
+    min-height: .5rem;
+    max-height: .5rem;
+    margin-left: 0.1rem;
+  }
+
+  .key th {
+    padding: 0.5rem 0.2rem;
+    font-size: 10px;
+    min-width: 6rem;
+    max-width: 6rem;
+    min-height: .5rem;
+    max-height: .5rem;
+  }
+
+  .fa-exchange-alt {
+    font-size: 25px;
+  }
+
+  /* Menu styling */
+
+  .menu a {
+    font-size: 20px;
+  }
+
+  .dropdown-content a {
+    font-size: 13.5px;
+  }
+
+  .menu-select span {
+    font-size: 15px;
+  }
+  
+  .info h1 {
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.075rem;
+    font-size: 40px;
+  }
+  
+  .info a {
+    padding: .75%;
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+  
+  .info-slot {
+    width: 15rem;
+    height: 3rem;
+    padding: 1rem 1rem;
+  }
+
+  .info-slot p {
+   font-size: 15px;
+  }
+
 }

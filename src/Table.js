@@ -1117,24 +1117,24 @@ const Table = () => {
       </div>
 
       <div className="period">
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
-        <div className="filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
+        <div className="filler middle-filler"></div>
       </div>
 
       <div className="period">
