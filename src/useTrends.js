@@ -8,137 +8,132 @@
 // (3) if the trend is undefined or it is equal to 0, the color light gray is used
 // (4) style the key according to the color trend
 
+const hideDataElements = () => {
+  document.querySelector(".preview").style.opacity = "0%";
+  document.querySelector(".key").style.opacity = "0%";
+  document.querySelector(".fa-exchange-alt").style.opacity = "0%";
+};
 
 export const showDensity = (elementsArray, elementList) => {
   for (let i of elementList) {
     // (1)
-    let elementDensityPercentage = (elementsArray[i.firstElementChild.children[2].textContent].density / 26.5);
+    let elementDensityPercentage =
+      elementsArray[i.firstElementChild.children[2].textContent].density / 26.5;
     // (2)
-    i.style.backgroundColor = `rgb(0, ${255 - 255 * elementDensityPercentage}, 255)`
-    // i.style.backgroundColor = `rgb(255, ${255 - (elementDensityPercentage) * 255}, ${elementDensityPercentage * 255})`
+    i.style.backgroundColor = `rgb(0, ${
+      300 - 255 * elementDensityPercentage
+    }, 255)`;
     // (3)
-    if (elementDensityPercentage === 0) {
-      i.style.backgroundColor = 'lightgray'
+    if (!elementDensityPercentage) {
+      i.style.backgroundColor = "lightgray";
     }
-    i.style.opacity = '85%'
+    i.style.opacity = "85%";
   }
 
   // (4)
-  let label = document.querySelector('.trend-label');
-  for (let i of label.children) {
-    i.style.display = 'none'
-  }
-  label.style.display = 'flex'
-  label.children[0].style.display = 'flex'
-
-}
+  // let label = document.querySelector(".trend-label");
+  // for (let i of label.children) {
+  //   i.style.display = "none";
+  // }
+  // label.style.display = "flex";
+  // label.children[0].style.display = "flex";
+  hideDataElements();
+};
 
 export const showRadius = (elementsArray, elementList) => {
   for (let i of elementList) {
     // (1)
-    let elementRadiusPercentage = (elementsArray[i.firstElementChild.children[2].textContent].atomicRadius / 225);
+    let elementRadiusPercentage =
+      elementsArray[i.firstElementChild.children[2].textContent].atomicRadius /
+      225;
     // (2)
-    i.style.backgroundColor = `rgb(127, 255, ${elementRadiusPercentage * 255})`
+    i.style.backgroundColor = `rgb(127, 255, ${elementRadiusPercentage * 255})`;
     // (3)
     if (elementRadiusPercentage === 0) {
-      i.style.backgroundColor = 'lightgray'
+      i.style.backgroundColor = "lightgray";
     }
-    i.style.opacity = '85%'
+    i.style.opacity = "85%";
   }
-  
-  // (4)
-  let label = document.querySelector('.trend-label');
-  for (let i of label.children) {
-    i.style.display = 'none'
-  }
-  label.style.display = 'flex'
-  label.children[1].style.display = 'flex'
-}
+
+  hideDataElements();
+};
 
 export const showElectronegativity = (elementsArray, elementList) => {
   for (let i of elementList) {
     // (1)
-    let elementNegativityPercentage = (elementsArray[i.firstElementChild.children[2].textContent].electronegativity / 4);
+    let elementNegativityPercentage =
+      elementsArray[i.firstElementChild.children[2].textContent]
+        .electronegativity / 4;
     // (2)
-    i.style.backgroundColor = `rgb(255, ${255 - (elementNegativityPercentage) * 255}, ${elementNegativityPercentage * 255})`
+    i.style.backgroundColor = `rgb(255, ${
+      255 - elementNegativityPercentage * 255
+    }, ${elementNegativityPercentage * 255})`;
     // (3)
     if (elementNegativityPercentage === 0) {
-      i.style.backgroundColor = 'lightgray'
+      i.style.backgroundColor = "lightgray";
     }
-    i.style.opacity = '85%'
+    i.style.opacity = "85%";
   }
-  
-  // (4)
-  let label = document.querySelector('.trend-label');
-  for (let i of label.children) {
-    i.style.display = 'none'
-  }
-  label.style.display = 'flex'
-  label.children[2].style.display = 'flex'
-}
+
+  hideDataElements();
+};
 
 export const showMP = (elementsArray, elementList) => {
   for (let i of elementList) {
     // (1)
-    let elementMeltingPointPercentage = (elementsArray[i.firstElementChild.children[2].textContent].meltingPoint / 3550);
+    let elementMeltingPointPercentage =
+      elementsArray[i.firstElementChild.children[2].textContent].meltingPoint /
+      3550;
     // (2)
-    i.style.backgroundColor = `rgb(255, ${255 - (elementMeltingPointPercentage) * 255}, 0)`
+    i.style.backgroundColor = `rgb(255, ${
+      255 - elementMeltingPointPercentage * 255
+    }, 0)`;
     // (3)
     if (elementMeltingPointPercentage === 0) {
-      i.style.backgroundColor = 'lightgray'
+      i.style.backgroundColor = "lightgray";
     }
-    i.style.opacity = '85%'
+    i.style.opacity = "85%";
   }
-  
-  // (4)
-  let label = document.querySelector('.trend-label');
-  for (let i of label.children) {
-    i.style.display = 'none'
-  }
-  label.style.display = 'flex'
-  label.children[3].style.display = 'flex'
-}
+
+  hideDataElements();
+};
 
 export const showBP = (elementsArray, elementList) => {
   for (let i of elementList) {
     // (1)
-    let elementBoilingPointPercentage = (elementsArray[i.firstElementChild.children[2].textContent].boilingPoint / 5555 );
+    let elementBoilingPointPercentage =
+      elementsArray[i.firstElementChild.children[2].textContent].boilingPoint /
+      5555;
     // (2)
-    i.style.backgroundColor = `rgb(255, ${255 - (elementBoilingPointPercentage) * 255}, 0)`
+    i.style.backgroundColor = `rgb(255, ${
+      255 - elementBoilingPointPercentage * 255
+    }, 0)`;
     // (3)
     if (elementBoilingPointPercentage === 0) {
-      i.style.backgroundColor = 'lightgray'
+      i.style.backgroundColor = "lightgray";
     }
-    i.style.opacity = '85%'
+    i.style.opacity = "85%";
   }
-  
-  // (4)
-  let label = document.querySelector('.trend-label');
-  for (let i of label.children) {
-    i.style.display = 'none'
-  }
-  label.style.display = 'flex'
-  label.children[4].style.display = 'flex'
-}
+
+  hideDataElements();
+};
 
 export const showFirstIE = (elementsArray, elementList) => {
   for (let i of elementList) {
     // (1)
-    let elementEnergyPercentage = (elementsArray[i.firstElementChild.children[2].textContent].ionizationEnergy / 1312)
+    let elementEnergyPercentage =
+      elementsArray[i.firstElementChild.children[2].textContent]
+        .ionizationEnergy / 1312;
     // (2)
-    i.style.backgroundColor = `rgb(125, ${255 - (elementEnergyPercentage) * 125}, ${elementEnergyPercentage * 255})`
+    i.style.backgroundColor = `rgb(125, ${
+      255 - elementEnergyPercentage * 125
+    }, ${elementEnergyPercentage * 255})`;
     // (3)
     if (elementEnergyPercentage === 0) {
-      i.style.backgroundColor = 'lightgray'
+      i.style.backgroundColor = "lightgray";
     }
-    i.style.opacity = '85%'
+    i.style.opacity = "85%";
   }
-  
-  // (4)
-  let label = document.querySelector('.trend-label');
-  for (let i of label.children) {
-    i.style.display = 'none'
-  }
-  label.style.display = 'flex'
-  label.children[5].style.display = 'flex'
-}
+
+  hideDataElements();
+};

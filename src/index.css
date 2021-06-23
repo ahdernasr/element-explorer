@@ -207,7 +207,7 @@ body {
 
 .density-label p {
   background-image: linear-gradient(to bottom right, rgb(0, 255, 255), rgb(0, 0, 255));
-  color: white;
+  color: black;
 }
 
 .radius-label p {
