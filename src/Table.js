@@ -91,8 +91,8 @@ const Table = () => {
 
     // Changes the color of the preview based on the color of the hovered element
     // does this through class list manipulation
-    atomicNumberEl.current.parentElement.parentElement.className = `preview ${
-      element.className.split(" ")[element.className.split(" ").length - 1]
+    document.querySelector('.preview').className = `preview ${
+        element.className.split(" ")[element.className.split(" ").length - 1]
     }`;
   };
 

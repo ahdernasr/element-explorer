@@ -32,13 +32,6 @@ http://localhost:3000/info/{element-name}
 
 Click on the trends menu at the right side of the navigation bar. Different chemical trends will appear, and simply select any of them to explore the different trends on the periodic table.
 
-## Todo
-
-- Better trend colours
-- More info on element info page 
-- Better responsiveness
-- Better/Clear Comments
-
 ## Dependencies
 
 - @testing-library/jest-dom: ^5.11.4

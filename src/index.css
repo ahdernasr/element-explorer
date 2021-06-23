@@ -195,14 +195,49 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #dadada;
+  background-color: lightgray;
 }
+
+.density-label p {
+  background-image: linear-gradient(to bottom right, rgb(0, 255, 255), rgb(0, 0, 255) );
+  color: white;
+}
+
+.radius-label p {
+  background-image: linear-gradient(to bottom right, rgb(127, 255, 0), rgb(127, 255, 255) );
+  color: black;
+}
+
+.electronegativity-label p {
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 0), rgb(255, 0, 255));
+  color: black;
+}
+
+.melting-label p {
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 0), rgb(255, 0, 0));
+  color: black;
+}
+
+.boiling-label p {
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 0), rgb(255, 0, 0));
+  color: black;
+}
+
+.ie-label p {
+  background-image: linear-gradient(to bottom right, rgb(125, 255, 0), rgb(125, 125, 255));
+  color: black;
+}
+
+
+
+
+
+
 
 .trend-label div p {
   padding: 1rem;
   border: 1px solid black;
   margin: 1rem 1rem;
-  color: black;
   font-weight: 600;
 }
 /* Flip from Key to Data button */
