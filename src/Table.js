@@ -91,13 +91,13 @@ const Table = () => {
 
     // Changes the color of the preview based on the color of the hovered element
     // does this through class list manipulation
-    document.querySelector('.preview').className = `preview ${
-        element.className.split(" ")[element.className.split(" ").length - 1]
+    document.querySelector(".preview").className = `preview ${
+      element.className.split(" ")[element.className.split(" ").length - 1]
     }`;
   };
 
   const hoverHandler = (event, element) => {
-    // Fires key and preview update functions if the hovered elements are the 
+    // Fires key and preview update functions if the hovered elements are the
     // acctual periodic element and not filler or information elements.
     if (
       element.firstElementChild.children &&

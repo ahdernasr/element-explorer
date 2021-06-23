@@ -38,26 +38,31 @@ const Navbar = () => {
   return (
     <div className="menu">
       <div className="logo">
-        <a target="_blank" href="http://www.github.com/ahdernasr/periodic-table" rel="noopener noreferrer" className="fab fa-github"></a>
+        <a
+          target="_blank"
+          href="http://www.github.com/ahdernasr/periodic-table"
+          rel="noopener noreferrer"
+          className="fab fa-github"
+        ></a>
         <a href="/" className="fas fa-home"></a>
       </div>
       <div className="menu-content">
-      {/* If the user's location path is home, render the dropdown menu for trends*/}
-      {(window.location.pathname === "/") &&
-                <div className="menu-select dropdown">
-                <span className="dropbtn">
-                  Trends<i className="fas fa-angle-down"></i>
-                </span>
-                <div className="dropdown-content">
-                  <a onClick={showDensity}>Density</a>
-                  <a onClick={showRadius}>Atomic radius</a>
-                  <a onClick={showElectronegativity}>Electronegativity</a>
-                  <a onClick={showMP}>Melting Point</a>
-                  <a onClick={showBP}>Boiling Point</a>
-                  <a onClick={showFirstIE}>First I.E.</a>
-                </div>
-              </div>
-    }
+        {/* If the user's location path is home, render the dropdown menu for trends*/}
+        {window.location.pathname === "/" && (
+          <div className="menu-select dropdown">
+            <span className="dropbtn">
+              Trends<i className="fas fa-angle-down"></i>
+            </span>
+            <div className="dropdown-content">
+              <a onClick={showDensity}>Density</a>
+              <a onClick={showRadius}>Atomic radius</a>
+              <a onClick={showElectronegativity}>Electronegativity</a>
+              <a onClick={showMP}>Melting Point</a>
+              <a onClick={showBP}>Boiling Point</a>
+              <a onClick={showFirstIE}>First I.E.</a>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

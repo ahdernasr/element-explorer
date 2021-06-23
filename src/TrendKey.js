@@ -8,16 +8,16 @@ const TrendKey = () => {
         <p>Radius →</p>
       </div>
       <div className="electronegativity-label">
-      <p>Negativity →</p>
+        <p>Negativity →</p>
       </div>
       <div className="melting-label">
-      <p>Melting Point →</p>
+        <p>Melting Point →</p>
       </div>
       <div className="boiling-label">
-      <p>Boiling Point →</p>
+        <p>Boiling Point →</p>
       </div>
       <div className="ie-label">
-      <p>First IE →</p>
+        <p>First IE →</p>
       </div>
     </div>
   );

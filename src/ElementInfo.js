@@ -36,11 +36,18 @@ const ElementInfo = () => {
       element[i] = capitalizeFirstLetter(element[i]);
     }
   }
-  
+
   return (
     <div className="info">
-      <h1>{element.name}-{parseInt(element.atomicMass).toFixed(0)}</h1>
-      <a target="_blank" rel="noopener noreferrer" href={`https://en.wikipedia.org/wiki/${element.name.toLowerCase()}`} className="fas fa-info-circle"></a>
+      <h1>
+        {element.name}-{parseInt(element.atomicMass).toFixed(0)}
+      </h1>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={`https://en.wikipedia.org/wiki/${element.name.toLowerCase()}`}
+        className="fas fa-info-circle"
+      ></a>
       <div className="info-box">
         <div className="info-slot">
           <p className="info-title">Atomic Mass</p>

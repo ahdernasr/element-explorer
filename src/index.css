@@ -98,7 +98,7 @@ body {
   background-color: white;
   text-align: center;
   height: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 /* Styling for box that previews hovered on element */
@@ -710,6 +710,13 @@ body {
     width: 10rem
   }
 
+  .period-label {
+    background-color: white;
+    text-align: center;
+    height: 30px;
+    padding-bottom: 5px;
+  }
+
   /* Menu styling */
 
   .menu div {
@@ -765,8 +772,24 @@ body {
     text-align: center;
     height: 10px;
     padding-bottom: 0px;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
+    font-size: 12.5px;
   }
+
+  .lan-act {
+    font-size: 10px;
+  }
+
+  .period1::before,
+  .period2::before,
+  .period3::before,
+  .period4::before,
+  .period5::before,
+  .period6::before,
+  .period7::before {
+    font-size: 12.5px;
+  }
+
 
   /* Filler elements (white blocks) */
   .filler {
@@ -834,20 +857,20 @@ body {
   .menu-select span {
     font-size: 15px;
   }
-  
+
   .info h1 {
     margin-bottom: 2.5rem;
     padding-bottom: 0.5rem;
     letter-spacing: 0.075rem;
     font-size: 40px;
   }
-  
+
   .info a {
     padding: .75%;
     margin-right: 1rem;
     font-size: 2rem;
   }
-  
+
   .info-slot {
     width: 15rem;
     height: 3rem;
@@ -855,7 +878,7 @@ body {
   }
 
   .info-slot p {
-   font-size: 15px;
+    font-size: 15px;
   }
 
 }
