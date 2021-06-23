@@ -6,6 +6,9 @@ It is also displays additional specific information on each element (i.e. densit
 
 This is AhuNasr#0113's submission for Timathon 2021 (June - July)
 
+Access [here](https://elementexplorer.herokuapp.com/).
+(Please expect long initial loading time since this app is hosted for free).
+
 ## How to use
 
 `Hovering`
