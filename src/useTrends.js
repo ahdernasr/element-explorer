@@ -24,7 +24,7 @@ export const showDensity = (elementsArray, elementList) => {
       300 - 255 * elementDensityPercentage
     }, 255)`;
     // (3)
-    if (!elementDensityPercentage) {
+    if (!elementsArray[i.firstElementChild.children[2].textContent].density) {
       i.style.backgroundColor = "lightgray";
     }
     i.style.opacity = "85%";
@@ -42,7 +42,7 @@ export const showRadius = (elementsArray, elementList) => {
     // (2)
     i.style.backgroundColor = `rgb(127, 255, ${elementRadiusPercentage * 255})`;
     // (3)
-    if (elementRadiusPercentage === 0) {
+    if (!elementsArray[i.firstElementChild.children[2].textContent].atomicRadius) {
       i.style.backgroundColor = "lightgray";
     }
     i.style.opacity = "85%";
@@ -62,7 +62,8 @@ export const showElectronegativity = (elementsArray, elementList) => {
       255 - elementNegativityPercentage * 255
     }, ${elementNegativityPercentage * 255})`;
     // (3)
-    if (elementNegativityPercentage === 0) {
+    if (!elementsArray[i.firstElementChild.children[2].textContent]
+      .electronegativity) {
       i.style.backgroundColor = "lightgray";
     }
     i.style.opacity = "85%";
@@ -82,7 +83,7 @@ export const showMP = (elementsArray, elementList) => {
       255 - elementMeltingPointPercentage * 255
     }, 0)`;
     // (3)
-    if (elementMeltingPointPercentage === 0) {
+    if (!elementsArray[i.firstElementChild.children[2].textContent].meltingPoint) {
       i.style.backgroundColor = "lightgray";
     }
     i.style.opacity = "85%";
@@ -102,7 +103,7 @@ export const showBP = (elementsArray, elementList) => {
       255 - elementBoilingPointPercentage * 255
     }, 0)`;
     // (3)
-    if (elementBoilingPointPercentage === 0) {
+    if (!elementsArray[i.firstElementChild.children[2].textContent].boilingPoint) {
       i.style.backgroundColor = "lightgray";
     }
     i.style.opacity = "85%";
@@ -122,7 +123,8 @@ export const showFirstIE = (elementsArray, elementList) => {
       255 - elementEnergyPercentage * 125
     }, ${elementEnergyPercentage * 255})`;
     // (3)
-    if (elementEnergyPercentage === 0) {
+    if (!elementsArray[i.firstElementChild.children[2].textContent]
+      .ionizationEnergy) {
       i.style.backgroundColor = "lightgray";
     }
     i.style.opacity = "85%";
