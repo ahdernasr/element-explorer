@@ -3,8 +3,10 @@ import useFetch from "./useFetch";
 
 //sfc
 const Table = () => {
+  // Obtain element information object from periodictable npm-wrapper
   const { elementsArray } = useFetch();
 
+  // Obain refs definined in the html return statement
   let atomicNumberEl = useRef(),
     standardState = useRef(),
     ionizationEnergy = useRef(),
@@ -15,6 +17,7 @@ const Table = () => {
     density = useRef(),
     atomicRadius = useRef();
 
+  // States used to update the element preview
   const [atomicNumber, setAtomicNumber] = useState("Atomic Number");
   const [symbol, setSymbol] = useState("Symbol");
   const [elementName, setElementName] = useState("Element Name");
@@ -22,6 +25,8 @@ const Table = () => {
     "Relative Atomic Mass"
   );
 
+  // Switch key button, uses css display style to hide and show or switch betweeen
+  // showing the color key or the data of each element
   const switchKeyHandler = () => {
     for (let q of document.getElementsByClassName("data-tables")) {
       if (q.style.display === "none") {
@@ -37,18 +42,23 @@ const Table = () => {
     }
   };
 
+  // Function that capitalizes first letter for visual improvements
   const capitalizeFirstLetter = (word) => {
     let newWord = "",
       tempWord;
     tempWord = word.split("");
+    // capitalise first letter, add it to the new word
     newWord += tempWord[0].toUpperCase();
+    // add the rest of the word to the new word
     for (let i = 1; i < word.length; i++) {
       newWord += tempWord[i];
     }
     return newWord;
   };
 
+  // Updates key on the hover of each element
   const updateKey = (currData) => {
+    //updating key using react useRef variables
     atomicRadius.current.innerHTML = currData.atomicRadius;
     ionizationEnergy.current.innerHTML = currData.ionizationEnergy;
     electronAffinity.current.innerHTML = currData.electronAffinity;
@@ -57,36 +67,38 @@ const Table = () => {
     discovered.current.innerHTML = currData.yearDiscovered;
     density.current.innerHTML = currData.density;
 
-    if (currData.atomicRadius === "") atomicRadius.current.innerHTML = "N/A";
-    if (currData.ionizationEnergy === "")
-      ionizationEnergy.current.innerHTML = "N/A";
-    if (currData.electronAffinity === "")
-      electronAffinity.current.innerHTML = "N/A";
-    if (currData.electronegativity === "")
-      electronegativity.current.innerHTML = "N/A";
-    if (currData.ionRadius === "") ionicRadius.current.innerHTML = "N/A";
-    if (currData.density === "") density.current.innerHTML = "N/A";
-    if (currData.standardState === "") {
-      standardState.current.innerHTML = "N/A";
-    } else {
-      standardState.current.innerHTML = capitalizeFirstLetter(
-        currData.standardState
-      );
+    // If any of the objects property's have a blank piece of information, replace with N/A
+    for (let i in currData) {
+      if (currData[i].length < 1) {
+        currData[i] = "N/A";
+      } else if (typeof currData[i] === "string") {
+        currData[i] = capitalizeFirstLetter(currData[i]);
+      }
     }
+
+    standardState.current.innerHTML = capitalizeFirstLetter(
+      currData.standardState
+    );
   };
 
+  // Updates preview on the hover of each element
   const updatePreview = (element) => {
+    // Updates preview using react state
     setAtomicNumber(element.firstElementChild.children[0].textContent);
     setSymbol(element.firstElementChild.children[1].textContent);
     setElementName(element.firstElementChild.children[2].textContent);
     setRelativeAtomicMass(element.firstElementChild.children[3].textContent);
 
+    // Changes the color of the preview based on the color of the hovered element
+    // does this through class list manipulation
     atomicNumberEl.current.parentElement.parentElement.className = `preview ${
       element.className.split(" ")[element.className.split(" ").length - 1]
     }`;
   };
 
   const hoverHandler = (event, element) => {
+    // Fires key and preview update functions if the hovered elements are the 
+    // acctual periodic element and not filler or information elements.
     if (
       element.firstElementChild.children &&
       !element.classList.contains("filler")
@@ -100,15 +112,20 @@ const Table = () => {
   };
 
   useEffect(() => {
+    // for every periodic element on the table
     for (let i of document.getElementsByClassName("table-element")) {
+      // Fires hover handler on hover
       i.addEventListener("mouseover", (e) => hoverHandler(e, i));
+      // Takes to new page with more information on the element if clicked
       i.addEventListener("click", (e) => {
-        window.location = `/info/${i.firstElementChild.children[2].textContent.toLowerCase()}`
+        window.location = `/info/${i.firstElementChild.children[2].textContent.toLowerCase()}`;
       });
     }
   });
 
   return (
+    // I recommend using VSCode's function minimise element feature on the left hand side
+    // to see how this html is layed out more easily
     <div className="periodic-table">
       {/* Labels for each group (1 to 18) */}
       <div className="period">
