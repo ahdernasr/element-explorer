@@ -431,12 +431,13 @@ const Table = () => {
               {" "}
               <div>
                 <h3>17</h3>
-                <h1>Sc</h1>
+                <h1>Cl</h1>
                 <h3>Chlorine</h3>
                 <h3>35.45</h3>
               </div>
             </div>
           </div>
+
           <div>
             <div className="table-element noble">
               {" "}
